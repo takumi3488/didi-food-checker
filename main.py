@@ -9,10 +9,10 @@ def main(driver: WebDriver):
         url = f.read().strip()
     driver.get(url)
     while True:
-        sleep(30)
+        sleep(60)
         try:
             driver.find_element(
-            by=By.CLASS_NAME, value="shop-status-desc").text.strip()
+                by=By.CLASS_NAME, value="shop-status-desc").text.strip()
             driver.refresh()
         except:
             webbrowser.open(url)
